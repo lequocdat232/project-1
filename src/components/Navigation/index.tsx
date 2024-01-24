@@ -5,7 +5,6 @@ import useCartStore from "../../hooks/useCartStore";
 
 const Navigation = () => {
   const balance = useCartStore((state) => state.balance);
-  const removeProduct = useCartStore((state) => state.removeProduct);
 
   const location = useLocation();
   const currentUrl = location.pathname;
@@ -46,20 +45,6 @@ const Navigation = () => {
         <div className='header-cart'>
           <i className='fa fa-shopping-cart'></i>
           <span>{balance}</span>
-        </div>
-        <div className='flex'>
-          {balance == 0 ? (
-            <button className='p-3 bg-slate-400 w-[60px] text-center' disabled>
-              -
-            </button>
-          ) : (
-            <button
-              className='p-3 bg-red-500 w-[60px] text-center'
-              onClick={removeProduct}
-            >
-              -
-            </button>
-          )}
         </div>
       </div>
     </nav>
