@@ -54,7 +54,7 @@ const ProductList: React.FC = () => {
               }
             >
               <img
-                src={product.images}
+                src={product.images[0]}
                 alt=''
                 style={{ cursor: "pointer" }}
                 onClick={handleAddProduct}
